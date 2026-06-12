@@ -12,7 +12,7 @@ lessThan(QT_MAJOR_VERSION, 5): error("requires Qt 5.6; found $$[QT_VERSION]")
 
 equals(QT_MAJOR_VERSION, 5): lessThan(QT_MINOR_VERSION, 6): error("requires Qt 5.6; found $$[QT_VERSION]")
 
-TARGET = qrenderdoc
+TARGET = blacatdocui
 TEMPLATE = app
 
 # include path for core renderdoc API
@@ -99,7 +99,7 @@ win32 {
 	LIBS += user32.lib
 
 	# Link against the core library
-	LIBS += $$DESTDIR/renderdoc.lib
+	LIBS += $$DESTDIR/blacatdoc.lib
 
 	# Link against the version library
 	LIBS += $$DESTDIR/version.lib
@@ -149,7 +149,7 @@ win32 {
 		# add qrc file with qt.conf
 		RESOURCES += Resources/qtconf.qrc
 		
-		librd.files = $$files($$DESTDIR/../lib/librenderdoc.dylib)
+		librd.files = $$files($$DESTDIR/../lib/libblacatdoc.dylib)
 		librd.path = Contents/lib
 		QMAKE_BUNDLE_DATA += librd
 

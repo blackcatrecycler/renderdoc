@@ -628,6 +628,8 @@ else()
 endif()
 
 add_library(renderdoc SHARED ${renderdoc_objects})
+set_target_properties(renderdoc PROPERTIES OUTPUT_NAME "blacatdoc")
+set_target_properties(renderdoc PROPERTIES OUTPUT_NAME "blacatdoc")
 target_compile_definitions(renderdoc ${RDOC_DEFINITIONS})
 target_include_directories(renderdoc ${RDOC_INCLUDES})
 target_link_libraries(renderdoc ${RDOC_LIBRARIES})
@@ -642,7 +644,7 @@ if(UNIX AND NOT ANDROID AND NOT APPLE)
     endif()
 
     if(NOT RELEASE_MODE)
-        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/librenderdoc.so-gdb.py ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/librenderdoc.so-gdb.py)
+        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/librenderdoc.so-gdb.py ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libblacatdoc.so-gdb.py)
     endif()
 
     set_target_properties(renderdoc PROPERTIES LINK_FLAGS "${RDOC_LINK_FLAGS}")
@@ -669,7 +671,7 @@ if(ANDROID)
     endif()
     set_target_properties(renderdoc PROPERTIES LINK_FLAGS "${RDOC_LINK_FLAGS}")
     # rename output library
-    set_target_properties(renderdoc PROPERTIES OUTPUT_NAME "VkLayer_GLES_RenderDoc")
+    set_target_properties(renderdoc PROPERTIES OUTPUT_NAME "VkLayer_GLES_BlacatDoc")
 
     if(STRIP_ANDROID_LIBRARY AND ANDROID_STRIP_TOOL AND RELEASE_MODE)
         add_custom_command(TARGET renderdoc POST_BUILD

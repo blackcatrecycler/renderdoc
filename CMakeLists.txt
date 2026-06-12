@@ -109,7 +109,7 @@ set(VULKAN_JSON_SUFFIX "" CACHE STRING "Suffix for the vulkan implicit_layer jso
 
 option(INTERNAL_SELF_CAPTURE "Internal option: enable self-capture" OFF)
 
-set(RDOC_BASE_NAME "renderdoc")
+set(RDOC_BASE_NAME "blacatdoc")
 if(INTERNAL_SELF_CAPTURE)
     set(RDOC_BASE_NAME "rdocself")
     add_definitions(-DRDOC_SELFCAPTURE_LIMITEDAPI=1)
@@ -518,8 +518,8 @@ if(ENABLE_RENDERDOCCMD)
 endif()
 
 # install documentation files
-install (FILES util/LINUX_DIST_README DESTINATION share/doc/renderdoc RENAME README)
-install (FILES LICENSE.md DESTINATION share/doc/renderdoc)
+install (FILES util/LINUX_DIST_README DESTINATION share/doc/blacatdoc RENAME README)
+install (FILES LICENSE.md DESTINATION share/doc/blacatdoc)
 
 message(STATUS "Enabled APIs:")
 if(ENABLE_GL)

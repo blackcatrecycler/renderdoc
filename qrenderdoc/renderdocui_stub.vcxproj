@@ -29,12 +29,12 @@
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <OutputDirectory>$(SolutionDir)$(Platform)\$(Configuration)\</OutputDirectory>
     <SolutionRelativeIntDir>$(Platform)\$(Configuration)\obj\$(ProjectName)\</SolutionRelativeIntDir>
     <CharacterSet>Unicode</CharacterSet>
-    <PrimaryOutput>renderdocui</PrimaryOutput>
-    <TargetName>renderdocui</TargetName>
+    <PrimaryOutput>blacatdocui_stub</PrimaryOutput>
+    <TargetName>blacatdocui_stub</TargetName>
   </PropertyGroup>
   <PropertyGroup>
     <IntDir>$(SolutionDir)$(SolutionRelativeIntDir)</IntDir>

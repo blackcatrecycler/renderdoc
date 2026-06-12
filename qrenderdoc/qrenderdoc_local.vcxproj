@@ -35,13 +35,13 @@
   <Import Project="$(SolutionDir)\util\WindowsSDKTarget.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
-    <PlatformToolSet>v140</PlatformToolSet>
+    <PlatformToolset>v143</PlatformToolset>
     <OutputDirectory>$(SolutionDir)$(Platform)\$(Configuration)\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
     <ConfigurationType>Application</ConfigurationType>
-    <PrimaryOutput>qrenderdoc</PrimaryOutput>
-    <TargetName>qrenderdoc</TargetName>
+    <PrimaryOutput>blacatdocui</PrimaryOutput>
+    <TargetName>blacatdocui</TargetName>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <SolutionRelativeIntDir>$(Platform)\$(Configuration)\obj\$(ProjectName)\</SolutionRelativeIntDir>
   </PropertyGroup>

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='windows-1252'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
-  <Product Name='RenderDoc' Id='*' UpgradeCode='D320753C-4B18-4905-A752-E68959943E7D'
+  <Product Name='BlacatDoc' Id='*' UpgradeCode='D320753C-4B18-4905-A752-E68959943E7D'
     Language='1033' Codepage='1252' Version='$(env.RENDERDOC_VERSION).0' Manufacturer='Baldur Karlsson'>
 
-    <Package Id='*' Keywords='Installer' Description="Installer for RenderDoc"
-      Comments='RenderDoc Homepage is http://renderdoc.org/' Manufacturer='Baldur Karlsson'
+    <Package Id='*' Keywords='Installer' Description="Installer for BlacatDoc"
+      Comments='BlacatDoc Homepage is http://renderdoc.org/' Manufacturer='Baldur Karlsson'
       InstallerVersion='301' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
 
     <UI> 
@@ -43,11 +43,11 @@
 
     <Directory Id='TARGETDIR' Name='SourceDir'>
       <Directory Id='ProgramFilesFolder' Name='PFiles'>
-        <Directory Id='INSTALLDIR' Name='RenderDoc'>
+        <Directory Id='INSTALLDIR' Name='BlacatDoc'>
 
           <Component Id='QRenderDoc' Guid='0DB375D5-7712-4853-AA75-536DF863C827'>
-            <File Id='qrenderdocEXE' Name='qrenderdoc.exe' DiskId='1' Source='dist/Release32/qrenderdoc.exe' KeyPath='yes'>
-              <Shortcut Id="startmenuRenderDoc" Directory="ProgramMenuDir" Name="RenderDoc" WorkingDirectory='INSTALLDIR' Icon="icon.ico" IconIndex="0" Advertise="yes" />
+            <File Id='qrenderdocEXE' Name='blacatdocui.exe' DiskId='1' Source='dist/Release32/blacatdocui.exe' KeyPath='yes'>
+              <Shortcut Id="startmenuRenderDoc" Directory="ProgramMenuDir" Name="BlacatDoc" WorkingDirectory='INSTALLDIR' Icon="icon.ico" IconIndex="0" Advertise="yes" />
             </File>
 
             <RegistryValue Root="HKLM" Id="VerbRDC" Action="write" 
@@ -56,7 +56,7 @@
               Type="expandable" />
             <RegistryValue Root="HKLM" Id="VerbDescRDC" Action="write" 
               Key="Software\Classes\RenderDoc.RDCCapture.1" 
-              Value='RenderDoc Capture Log (.rdc)' 
+              Value='BlacatDoc Capture Log (.rdc)' 
               Type="expandable" />
             <RegistryValue Root="HKLM" Id="VerbIconRDC" Action="write" 
               Key="Software\Classes\RenderDoc.RDCCapture.1\DefaultIcon" 
@@ -73,7 +73,7 @@
               Type="expandable" />
             <RegistryValue Root="HKLM" Id="VerbDescCAP" Action="write" 
               Key="Software\Classes\RenderDoc.RDCSettings.1" 
-              Value='RenderDoc Capture Settings (.cap)' 
+              Value='BlacatDoc Capture Settings (.cap)' 
               Type="expandable" />
             <RegistryValue Root="HKLM" Id="VerbIconCAP" Action="write" 
               Key="Software\Classes\RenderDoc.RDCSettings.1\DefaultIcon" 
@@ -83,10 +83,10 @@
           </Component>
 
           <Component Id='RenderDocCPP' Guid='2E6F718F-8BCC-4D41-9688-E99CF2F6B303'>
-            <File Id='RenderDocCPP' Name='renderdoc.dll' DiskId='1' Source='dist/Release32/renderdoc.dll' KeyPath='yes' />
-            <File Id='RenderDocJSON' Name='renderdoc.json' DiskId='1' Source='dist/Release32/renderdoc.json' />
+            <File Id='RenderDocCPP' Name='blacatdoc.dll' DiskId='1' Source='dist/Release32/blacatdoc.dll' KeyPath='yes' />
+            <File Id='RenderDocJSON' Name='blacatdoc.json' DiskId='1' Source='dist/Release32/blacatdoc.json' />
             <File Id='D3DCompiler47' Name='d3dcompiler_47.dll' DiskId='1' Source='dist/Release32/d3dcompiler_47.dll' />
-            <File Id='RenderDocSHIM' Name='renderdocshim32.dll' DiskId='1' Source='dist/Release32/renderdocshim32.dll' />
+            <File Id='RenderDocSHIM' Name='blacatdocshim32.dll' DiskId='1' Source='dist/Release32/blacatdocshim32.dll' />
             <File Id='dbghelpDLL' Name='dbghelp.dll' DiskId='1' Source='dist/Release32/dbghelp.dll' />
             <File Id='symsrvDLL' Name='symsrv.dll' DiskId='1' Source='dist/Release32/symsrv.dll' />
             <File Id='symsrvYES' Name='symsrv.yes' DiskId='1' Source='dist/Release32/symsrv.yes' />
@@ -115,7 +115,7 @@
           </Component>
 
           <Component Id='RenderDocCMD' Guid='97338A5D-8FDB-4DF5-AEC7-14B36F234F29'>
-            <File Id='RenderDocCMD' Name='renderdoccmd.exe' DiskId='1' Source='dist/Release32/renderdoccmd.exe' KeyPath='yes' />
+            <File Id='RenderDocCMD' Name='blacatdoccmd.exe' DiskId='1' Source='dist/Release32/blacatdoccmd.exe' KeyPath='yes' />
           </Component>
 
           <Component Id='Qt' Guid='63C1C176-5B7C-4D29-9382-8E0FA75C5B80'>
@@ -137,7 +137,7 @@
 
           <Component Id='Documentation' Guid='CD32B446-6DC1-49E4-8FE9-509E1AFB126D'>
             <File Id='Documentation' Name='renderdoc.chm' DiskId='1' Source='dist/Release32/renderdoc.chm' KeyPath='yes'>
-              <Shortcut Id="startmenuDocs" Directory="ProgramMenuDir" Name="RenderDoc Documentation" Icon='chm.ico' Advertise="yes" />
+              <Shortcut Id="startmenuDocs" Directory="ProgramMenuDir" Name="BlacatDoc Documentation" Icon='chm.ico' Advertise="yes" />
             </File>
           </Component>
 
@@ -211,7 +211,7 @@
       </Directory>
 
       <Directory Id="ProgramMenuFolder" Name="Programs">
-        <Directory Id="ProgramMenuDir" Name="RenderDoc">
+        <Directory Id="ProgramMenuDir" Name="BlacatDoc">
           <Component Id="ProgramMenuDir" Guid="30CCCAB1-49D5-45B3-952C-53E3B581E691">
             <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
             <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
@@ -221,39 +221,39 @@
 
       <Component Id="ImageOpenWith" Guid="1F56AF06-3E83-4D7E-85A2-6A309A55FF4F">
         <RegistryValue Root="HKLM" Id="RDCOpenWithCommand" Action="write" KeyPath='yes'
-          Key="Software\Classes\Applications\qrenderdoc.exe\shell\open\command"
+          Key="Software\Classes\Applications\blacatdocui.exe\shell\open\command"
           Value='"[#qrenderdocEXE]" "%1"'
           Type="string" />
 
         <RegistryValue Root="HKLM" Id="RDCOpenWithDDS" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.dds'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithHDR" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.hdr'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithJPG" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.jpg'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithJPEG" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.jpeg'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithPNG" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.png'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithEXR" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.exr'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithTGA" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.tga'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithBMP" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.bmp'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithGIF" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.gif'  Value='' Type="string" />
         <RegistryValue Root="HKLM" Id="RDCOpenWithPSD" Action="write"
-          Key="Software\Classes\Applications\qrenderdoc.exe\SupportedTypes"
+          Key="Software\Classes\Applications\blacatdocui.exe\SupportedTypes"
           Name='.psd'  Value='' Type="string" />
 
         <RegistryValue Root="HKLM" Id="RDCOpenWithProgidDDS" Action="write"
